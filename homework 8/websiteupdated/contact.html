@@ -1,0 +1,61 @@
+<html>
+    <title>Wills Website</title>
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+   
+    <head>
+        <link rel="stylesheet" type="text/css" href="mainstyle.css">
+        <script>
+            function getData()
+            {
+                var name = document.getElementById("textName").value;
+                var email = document.getElementById("textEmail").value;
+                if(name == "")
+                {
+                    document.getElementById("textName").style.backgroundColor = "red";
+                    document.getElementById("textName").focus();
+
+                    document.getElementById("textEmail").style.backgroundColor = "red";
+                    document.getElementById("textEmail").focus();
+                }
+                else
+                {
+                    document.getElementById("textName").style.backgroundColor = "white";
+                    document.getElementById("textEmail").style.backgroundColor = "white";
+                }
+                document.getElementById("finalResult").innerHTML = "My name is: " + name + " My email is: " + email;
+                
+            }
+        </script>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td>Name (first and last)</td>
+                <td><input type="text" id="textName"></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="text" id="textEmail"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button id="btnSubmit" onClick="getData();">Submit</button></td>
+            </tr>
+        </table>
+        <div id="finalResult"></div>
+        <br>
+    <h4>Terms of Agreement: Is it okay if I steal all of your information?</h2>
+   
+        <input type="checkbox" name="YES" value="YES">YES 
+    <br>
+    <input type="checkbox" name="NO" value="NO">NO
+    <br />
+    <br>
+    <a href="game.html">Play a fun game!</a>
+    </body>
+    <script>console.log("consonle");</script>
+ </html>

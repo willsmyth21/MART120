@@ -1,0 +1,53 @@
+<html>
+    <title>Wills Website: Game</title>
+    GAME
+    <head>
+        <link rel="stylesheet" type="text/css" href="mainstyle.css">
+    </head>
+    <head> 
+        <script>
+            function printQuestion()
+            {
+                
+                var number1, number2 
+                for(var i = 0; i < 6; i++)
+                {
+                    number1 = Math.floor(Math.random() * 10);
+                    number2 = Math.floor(Math.random() * 10);
+                }
+                
+                actualanswer = number1 + number2;
+                document.getElementById("theQuestion").innerHTML = "What is " + number1 + "+" + number2 + "?"; 
+            }
+            function checkAnswer()
+            {
+            var answer = document.getElementById("txtAnswer").value;
+            if(answer == actualanswer)
+            {
+                document.getElementById("finalResult").innerHTML = "Correct!";
+            }
+            else
+            {
+                document.getElementById("finalResult").innerHTML = "Wrong, try again";
+            }7
+        
+        }
+       
+
+        </script>
+    </head>
+    <body onload="printQuestion();">
+        <div id="theQuestion"></div>
+        <table>
+            <tr>
+                <td>Your answer</td>
+                <td><input type="text" id="txtAnswer"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button id="btnSubmit" onClick="checkAnswer();">Submit</button></td>
+            </tr>
+        </table>
+        <div id="finalResult"></div>
+    </body>
+    <script>console.log("consonle");</script>
+ </html>
