@@ -1,0 +1,155 @@
+<html>
+    <head>
+        <title> p5.js page </title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
+       <script>
+               
+               var righteyeX = 270;
+var righteyeY = 150;
+var righteyeDirection = 5;
+
+var lefteyeX = 200;
+var lefteyeY = 185;
+var lefteyeDirection = 2;
+
+var mouthX = 200;
+var mouthY = 280;
+var mouthDirection = 3;
+
+var purpleX= 295
+var purpleY= 160
+var purpleDirection=6
+
+var size = 80;
+var count = 1;
+var sizeDirection = 13;
+
+var x = 50
+var y = 569
+
+
+function setup() {
+    createCanvas(500, 500);
+    }
+    
+    function draw() {
+    background(110,200,100);
+      
+    fill(255,0,0)
+    point(200, 200);
+    
+      
+      
+    //body
+    fill (100,169,255);
+    triangle(0, 500, 250, 250, 500, 500);
+    
+    //head
+    fill (255,221,155);
+    ellipse (250,200,300,350);
+    
+      //hair
+    fill(233,233,0);
+    rect(114,12,271,112);
+    
+    //righteye
+    fill (255,100,100);
+    square(righteyeX,righteyeY,50);
+   righteyeX+=righteyeDirection;
+    if(righteyeX >= 450 || righteyeX <= 5)
+    {
+        righteyeDirection *= -1;
+    }
+    
+    //lefteye
+   fill(255,100,100);
+   rect(180,lefteyeY,50,111);
+    lefteyeY += lefteyeDirection;
+    if(lefteyeY <= 0 || lefteyeY >= 400 )
+    {
+        lefteyeDirection *= -1;}
+
+   
+    //mouth red
+    rect (200,280,100,50);
+    
+      
+  //purple ellipse 
+    fill(100,100,200);
+    ellipse(purpleX,purpleY,40,50);
+    purpleY += purpleDirection;
+    if(purpleY <= 0 || purpleY >= 490 )
+    {
+        purpleDirection *= -1;}
+    
+    
+    //blueeyeright
+    fill(0,100,255);
+    ellipse (295,180,30,30);
+    
+      //blueeye left
+    ellipse (200,200,50,69);
+    
+      
+    
+      //yellowmouth
+    fill (222,222,0);
+      rect(mouthX,mouthY,70,50);
+   mouthX+=mouthDirection;
+    if(mouthX >= 430 || mouthX <= 3)
+    {
+        mouthDirection *= -1;
+    }
+    
+    //nose
+    fill (255,100,100);
+    triangle(240, 170, 250, 250, 350, 350);
+    
+      // ears
+    fill( 255,220,220)
+    triangle (120, 250, 50, 150, 120, 200);
+    triangle (380, 250, 450, 225, 378, 200);
+    
+      //arms
+    line(310, 400, 390, 500);
+    line(180, 400, 177, 500);
+      
+    
+    
+    //TITLE
+      fill(255,0,0)
+    textSize(size);
+    size+= sizeDirection;
+    count++;
+    if(count > 10)
+    {
+        sizeDirection *=-1;
+        count = -4;
+    }
+      
+    text('BILL', -20, 100);
+    text('BILL', 144, 100);
+    text('BILL', 310, 100);
+    text('BILL', 478, 100);
+
+    //SIGNATURE
+    textSize(21);
+    fill(0,0,0)
+    text('will smyth',x,y);
+    x = x + 1;
+    y = y + -2;
+      
+     
+      
+    }
+   </script>
+
+ </head>
+
+<body>
+    
+</body>
+
+</html>
+
+
